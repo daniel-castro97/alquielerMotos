@@ -25,6 +25,7 @@ pipeline{
                             url:'https://github.com/daniel-castro97/alquielerMotos.git'
                             ]]
                             ])
+                            sh '​gradle​ --b ​./alquielerMotos/build.gradle clean compileJava​'
                             }
                         }
                         stage('Compile & Unit Tests') {
