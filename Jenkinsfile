@@ -25,7 +25,7 @@ pipeline{
                         url: 'https://github.com/daniel-castro97/alquielerMotos.git'
                     ]]
                 ])
-                sh '​gradle​ --b ​./proyecto1/build.gradle clean compileJava​'
+                sh '​gradle​ --b ​./alquielerMotos/build.gradle clean compileJava​'
             }
         }
    }
