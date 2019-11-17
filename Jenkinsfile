@@ -29,16 +29,15 @@ pipeline{
                         }
                         stage('Build project') {
                            steps {
-                              sh '​gradle​ --b ​./alquielerMotos/build.gradle clean'
-                              sh '​gradle​ --b ​./alquielerMotos/build.gradle build'
+                              sh 'gradle --b ./alquielerMotos/build.gradle clean'
+                              sh 'gradle --b ./alquielerMotos/build.gradle build'
                            }
                         }
                         stage('Compile & Unit Tests') {
-                        steps{
-                        echo "------------>Unit Tests<------------"
-                        sh '​gradle --b ./alquielerMotos/build.gradle test​' 
-                      }
-}
-                        
+                           steps {
+                              echo "--------------->Unit Tests<--------"
+                              sh 'gradle --b ./alquielerMotos/build.gradle test'
+                           }
+                        }          
          }
 }
