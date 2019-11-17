@@ -11,4 +11,22 @@ pipeline{
       gradle 'Gradle4.5_Centos' //Preinstalada en la Configuración del Master   } 
       //Aquí comienzan los “items” del Pipeline
    }
+   stages {
+      stage('Checkout'){
+            steps{
+                echo "------------>Checkout<------------"
+                checkout([$​class: 'GitSCM​',
+                    branches: [[name: '*/master']],
+                    doGenerateSubmoduleConfigurations: false,
+                    extensions: [], gitTool: 'Git_Centos',
+                    submoduleCfg: [],
+                    userRemoteConfigs: [[
+                        credentialsId: 'GitHub_daniel-castro97',
+                        url: 'https://github.com/daniel-castro97/alquielerMotos.git'
+                    ]]
+                ])
+                sh '​gradle​ --b ​./proyecto1/build.gradle clean compileJava​'
+            }
+        }
+   }
 }
