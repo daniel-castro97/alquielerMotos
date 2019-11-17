@@ -29,7 +29,7 @@ pipeline{
                         }
                         stage('Build project') {
                            steps {
-                              sh 'gradle --b ./alquielerMotos/build.gradle clean'
+                              sh 'gradle --b ./build.gradle clean'
                               sh 'gradle --b ./alquielerMotos/build.gradle build'
                            }
                         }
