@@ -55,19 +55,12 @@ pipeline{
                         }         
          }
          post {
-    always {
-       echo 'This always run'
-    }
-    success{
-       echo 'This will run only if successfull'
-       junit '/build/test-results/test/*.xml'
-    }
-    failure {
-       echo 'This will run only if failed'
-       mail(to: 'daniel.castro@ceiba.com.co',
-          subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
-          body: "Something is wrong with ${env.BUILD_URL}")
-    }
+            always {
+               echo 'This always run'
+            }
+            success{
+               echo 'This will run only if successfull'
+               junit 'build/test-results/test/*.xml'
+            }
+      }
  }
- 
-}
