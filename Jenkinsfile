@@ -54,4 +54,18 @@ pipeline{
                            }
                         }         
          }
+         post {
+            always {
+               echo 'This always run'
+            }
+            success{
+               echo 'This will run only if successfull'
+            }
+            failure {
+               echo 'This will run only if failed'
+               mail(to: 'daniel.castro@ceiba.com.co',
+                  subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+                  body: "Something is wrong with ${env.BUILD_URL}")
+            }
+         }
 }
