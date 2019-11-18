@@ -6,7 +6,7 @@ pipeline{
    }
    tools {
       jdk 'JDK8_Centos' //Preinstalada en la Configuración del Master     
-      gradle 'Gradle4.5_Centos' //Preinstalada en la Configuración del Master   } 
+      gradle 'Gradle5.6_Centos' //Preinstalada en la Configuración del Master   } 
       //Aquí comienzan los “items” del Pipeline
    }
   stages {
@@ -30,7 +30,7 @@ pipeline{
                         stage('Build project') {
                            steps {
                               sh 'gradle --b ./build.gradle clean'
-                              sh 'gradle --b ./alquielerMotos/build.gradle build'
+                              sh 'gradle --b ./build.gradle build'
                            }
                         }
                         stage('Compile & Unit Tests') {
