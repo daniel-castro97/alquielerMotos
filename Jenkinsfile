@@ -38,6 +38,14 @@ pipeline{
                               echo "--------------->Unit Tests<--------"
                               sh 'gradle --b ./build.gradle test'
                            }
-                        }          
+                        }
+                        stage('Static Code Analysys'){
+                           steps {
+                              echo '----------------->Analisis de Código estático<-----------------'
+                              withSonarQubeEnv('Sonar'){
+                                 sh "${tool name: 'SonarScanner', type:'hudson.plugins.sonar.SonarRunnerInstallation'}/bin/sonar-scanner -Dproject.settings=sonar-project.properties"
+                              }
+                           }
+                        }         
          }
 }
