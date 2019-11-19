@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name="MOTOS")
 @Table(name = "MOTOS")
 public class Moto implements Serializable{
 

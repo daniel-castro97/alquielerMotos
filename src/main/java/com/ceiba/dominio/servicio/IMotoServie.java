@@ -8,6 +8,6 @@ import com.ceiba.infraestructura.model.Moto;
 
 public interface IMotoServie {
 	
-	public List<Moto> getMoto();
+	public List<Moto> findAll();
 
 }

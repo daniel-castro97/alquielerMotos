@@ -13,8 +13,12 @@ import com.ceiba.infraestructura.model.Moto;
 public class MotoService implements IMotoServie{
 	@Autowired
 	private MotoDao motoDao;
-	
-	public List<Moto> getMoto(){
-		return (List<Moto>) motoDao.findAll();
+
+	@Override
+	public List<Moto> findAll() {
+
+		return motoDao.findAll();
 	}
+	
+
 }
