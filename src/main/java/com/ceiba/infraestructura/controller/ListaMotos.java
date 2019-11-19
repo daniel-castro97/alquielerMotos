@@ -1,4 +1,4 @@
-package com.ceiba.dominio.controller;
+package com.ceiba.infraestructura.controller;
 
 
 import java.util.List;
@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.ceiba.dominio.servicio.IMotoServie;
-import com.ceiba.infraestructura.model.Moto;
+
+import com.ceiba.infraestructura.model.MotoEntity;
+import com.ceiba.infraestructura.servicio.IMotoServie;
 
 
 @RestController
@@ -25,7 +26,7 @@ public class ListaMotos {
 	}
 	
 	@GetMapping(path ="/motos")
-	public List<Moto> getMotos(){
+	public List<MotoEntity> getMotos(){
 		return motoServie.findAll();
 	}
 	
