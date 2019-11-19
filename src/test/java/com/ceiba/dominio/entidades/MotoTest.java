@@ -14,7 +14,7 @@ public class MotoTest {
 		Moto moto = new MotoTestDataBuilder().build();
 		
 		
-		assertEquals(0, moto.getCilindrada());
+		assertEquals(160, moto.getCilindrada());
 	}
 
 }
