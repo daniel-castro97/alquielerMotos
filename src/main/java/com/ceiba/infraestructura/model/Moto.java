@@ -1,17 +1,24 @@
 package com.ceiba.infraestructura.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "moto")
-public class Moto {
+@Table(name = "MOTOS")
+public class Moto implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@Column(name = "placa")
-	private int placa;
+	private String placa;
 	
 	@Column(name = "marca")
 	private String marca;

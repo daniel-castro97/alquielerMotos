@@ -1,7 +1,6 @@
 package com.ceiba.dominio.entidades;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.text.ParseException;
 
@@ -15,6 +14,14 @@ public class MotoTest {
 		
 		
 		assertEquals(160, moto.getCilindrada());
+		
 	}
+	
+//	@Test
+//	public void validarPlaca() throws ParseException {
+//		MotoTestDataBuilder motoTestDataBuilder = new MotoTestDataBuilder();
+//		motoTestDataBuilder.withPlaca("abc");
+//		//assertThrows(ExcepcionValidadorMoto.class, motoTestDataBuilder.withPlaca("abc"), "");
+//	}
 
 }
