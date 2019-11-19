@@ -14,10 +14,10 @@ public class ValidadorMoto {
 	
 	}
 	/**
-	 * Funcion para validar que el tamaño de una placa de una moto sea exacta
+	 * Funcion para validar que el tamanio de una placa de una moto sea exacta
 	 * @param valor, valor de placa validar
 	 * @param tamanio, tamanio estatico ya definido
-	 * @param mensaje, mensaje en caso de excepción
+	 * @param mensaje, mensaje en caso de excepcion
 	 */
 	public static void validarPlaca(String valor, int tamanio, String mensaje) {
 		if(valor.length()!=tamanio) {
